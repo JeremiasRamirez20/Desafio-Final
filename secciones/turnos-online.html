@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JXC Turnos Online </title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+	<body class="container">
+		<header>
+			<nav class="nav__menu">
+				<a href="../index.html">
+					<img src="../img/logo pagina.png" alt="logo de la pagina web" class="nav__logo">
+				</a>
+				<ol>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../secciones/quienes-somos.html">Quienes Somos</a></li>
+					<li><a href="../secciones/nuestros-servicios.html">Nuestros Servicios</a></li>
+					<li><a href="turnos-online.html">Turnos Online</a></li>
+					<li><a href="../secciones/contacto.html">Contacto</a></li>
+				</ol>
+			</nav>
+			<h1>Agenda tu Turno</h1>
+		</header>
+		<Main>
+			<section>
+				<div>
+					<form action="envio.php" method="post">
+						<fieldset>
+							<legend>Datos Personales</legend>
+							<label for="Nombre y Apellido">Nombre y Apellido</label>
+							<input type="text" name="Nombre y Apellido" id="Nombre y Apellido">
+							<br>
+							<label for="Email">Email</label>
+							<input type="text" name="Email" id="Email">
+							<br>
+							<!--en type puede ir text o email tranquilamente -->
+							<label for="Telefono">Telefono</label>
+							<input type="text" name="Telefono" id="Telefono">
+							<br>
+							<label for="Obra Social">Obra Social</label>
+							<input type="text" name="Obra Social" id="Obra Social">
+						</fieldset>
+						<fieldset>
+							<legend>Servicio</legend>
+							<select name="Servicio" id="Servicio">
+								<option value="Kinesiolagia">Kinesiologia</option>
+								<option value="Quiropraxia">Quiropraxia</option>
+								<option value="Masajes">Masajes Descontracturantes</option>
+								<option value="Rehabilitacion">Rehabilitacion Post Operatoria</option>
+							</select>
+							<br>
+							<label for="Domicilio">A Domicilio</label>
+							<input type="radio" name="envio" id="Domicilio" value="Domicilio">
+							<br>
+							<label for="Nuestra Sucursal">Nuestra Sucursal</label>
+							<input type="radio" name="envio" id="Nuestra Sucursal" value="Nuestra Sucursal">
+						</fieldset>
+						<br><br>
+						<input type="submit" value="Enviar">
+						<input type="reset" value="Cancelar">
+					</form>
+				</div>
+			</section>
+			<img src="" alt="Imagen al lado del formulario">
+		</Main>
+		<footer class="footer">
+			<h3 class="footer__titulo">Seguinos en Nuestras Redes</h3>
+			<h4>Derechos de autor reservados 2022</h4>
+			<a href="https://twitter.com" target="_blank">
+				<img src="../img/logo twitter.png" alt="logo twitter" class="footer__icon">
+			</a>
+			<a href="https://www.instagram.com/?hl=es-la" target="_blank">
+				<img src="../img/logo instagram.png" alt="logo instagram" class="footer__icon">
+			</a>
+		</footer>
+	</body>
+</html>

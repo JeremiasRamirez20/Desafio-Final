@@ -1,0 +1,203 @@
+/* Estilos comunes */
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background: #fff;
+    color: #434343;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+}
+
+a{
+	color: #050505;
+	text-decoration: none;   
+}
+
+ol{
+	list-style: none;
+}
+
+.container{
+	width: 90%;
+	height: 100vh;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: "header" "main" "footer";
+}
+
+/* Inicia Footer */
+
+.footer{
+	background-color: blueviolet;
+	height: auto;
+	width: 100%;
+	grid-area: footer;
+}
+
+.footer h4{
+	color: black;
+	text-align: center;
+
+}
+
+.footer__titulo{
+	text-align: center;
+	color: black;
+	margin-top: 5%;
+}
+
+.footer__icon{
+	width: 3%;
+
+}
+
+/* Termina Estilos Comunes */
+/* Arranca la botonera */
+
+.header{
+	grid-area: header;
+}
+
+.nav__menu{
+	font-size: 16px;
+	display: flex;
+	justify-content: space-between;
+	color: black;
+	background-color: blueviolet;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	height: 75px;
+}
+
+.nav__logo{
+	width: 75px;	
+}
+
+.nav__menu ol{
+	display: flex;
+}
+
+.nav__menu ol li{
+	padding: 10px;
+}
+
+.nav__menu ol li a:hover {
+	border-bottom: 2px solid #030303;
+}
+
+/*Parte Principal*/
+
+.img__principal{
+	margin-top: 5%;
+	background-image: url(../img/header.jpg);
+	background-size: cover;
+	height: 30em;
+}
+
+.img__principal h1{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: darkblue;
+}
+
+
+/* Inicia el Main*/
+
+.main{
+	margin-top: 10%;
+	margin-bottom: 10%;
+	grid-area: main;
+}
+
+.main h1{
+	text-align: center;
+	color: darkblue;
+}
+
+
+.section__titulo{
+	text-align: center;
+	color: darkblue;
+}
+
+.section__parrafo{
+	text-align: center;
+	width: 50%;
+	height: auto;
+	margin: 30px auto;
+	border-style: none;
+	padding: 20px 20px;
+}
+
+/* inicia Quienes Somos*/
+
+.retratos{
+	width: 100px;
+}
+
+.presentacion{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+
+
+
+.article__presentacion{
+	text-align: center;
+	height: auto;
+	margin: 30px auto;
+	padding: 20px 20px;
+	border-style: solid;
+	border-color: blueviolet;
+	width: 45%;
+}
+
+.article__titulos{
+	color: darkcyan;
+	margin-bottom: 10px;
+}
+
+/* Arranca los break points */
+
+@media screen and (max-width: 900px) {
+		.container{
+			width: 100%;
+		}
+
+		.img__principal{
+			margin-top: 10%;
+			height: 15em;
+		}
+		
+		.main{
+			margin-bottom: 8%;
+		}
+
+		.footer__icon{
+			width: 5%;
+		}
+}
+
+@media screen and (min-width: 720px) {
+		.img__principal{
+			height: 20em;
+		}
+
+}
+
+@media screen and (max-width: 600px) {
+	.presentacion{
+		flex-direction: column;
+		justify-content: center;
+	}
+}

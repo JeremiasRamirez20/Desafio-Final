@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JXC Contacto</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+	<body class="container">
+		<header>
+			<nav class="nav__menu">
+				<a href="../index.html">
+					<img src="../img/logo pagina.png" alt="logo de la pagina web" class="nav__logo">
+				</a>
+				<ol>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../secciones/quienes-somos.html">Quienes Somos</a></li>
+					<li><a href="../secciones/nuestros-servicios.html">Nuestros Servicios</a></li>
+					<li><a href="../secciones/turnos-online.html">Turnos Online</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+				</ol>
+			</nav>
+			<h1>Contacto</h1>
+		</header>
+		<main>
+			<section>
+				<div>
+					<form action="envio.php" method="post">
+						<fieldset>
+							<legend>Escribanos</legend>
+							<label for="Nombre y Apellido">Nombre y Apellido</label>
+							<input type="text" name="Nombre y Apellido" id="Nombre y Apellido">
+							<br>
+							<label for="Email">Email</label>
+							<input type="text" name="Email" id="Email">
+							<br>
+							<!--en type puede ir text o email tranquilamente -->
+							<label for="Telefono">Telefono</label>
+							<input type="text" name="Telefono" id="Telefono">
+						</fieldset>
+						<br>
+						<label for="mensaje">Deja tu consulta</label><br>
+						<textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Deja tu consulta"></textarea>
+						<br><br>
+						<input type="submit" value="Enviar">
+						<input type="reset" value="Cancelar">
+					</form>
+				</div>
+			</section>
+			<section>
+				<article>
+					<h2>Contactese</h2>
+					<h3>Direccion:</h3>
+					<h3>Telefono:</h3>
+					<h3>Email:</h3>
+				</article>
+			</section>
+			<section>
+				<div>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.05127690659!2d-60.63803018474162!3d-32.94965558092024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab1ba28a46cd%3A0x215412d2e8dfc2e7!2sMaip%C3%BA%201000%2C%20S2000CGK%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1644452236977!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<h3 class="footer__titulo">Seguinos en Nuestras Redes</h3>
+			<h4>Derechos de autor reservados 2022</h4>
+			<a href="https://twitter.com" target="_blank">
+				<img src="../img/logo twitter.png" alt="logo twitter" class="footer__icon">
+			</a>
+			<a href="https://www.instagram.com/?hl=es-la" target="_blank">
+				<img src="../img/logo instagram.png" alt="logo instagram" class="footer__icon">
+			</a>
+		</footer>
+	</body>
+</html>
