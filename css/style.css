@@ -34,7 +34,8 @@ ol{
 /* Inicia Footer */
 
 .footer{
-	background-color: blueviolet;
+	background: rgb(18,18,129);
+	background: linear-gradient(90deg, rgba(18,18,129,1) 30%, rgba(157,44,227,1) 62%);
 	height: auto;
 	width: 100%;
 	grid-area: footer;
@@ -69,7 +70,8 @@ ol{
 	display: flex;
 	justify-content: space-between;
 	color: black;
-	background-color: blueviolet;
+	background: rgb(18,18,129);
+	background: linear-gradient(90deg, rgba(18,18,129,1) 30%, rgba(157,44,227,1) 62%);
 	position: sticky;
 	top: 0;
 	width: 100%;
@@ -88,9 +90,19 @@ ol{
 	padding: 10px;
 }
 
-.nav__menu ol li a:hover {
-	border-bottom: 2px solid #030303;
+.nav__menu ol li a {
+	background: linear-gradient(currentColor,currentColor);
+	background-position: 0% 100%;
+	background-repeat: no-repeat;
+	background-size: 0% 3px;
+	transition: background-size .3s;
 }
+
+.nav__menu ol li a:hover {
+	color: black;
+	background-size: 100% 3px;
+}
+
 
 /*Parte Principal*/
 
@@ -176,7 +188,7 @@ ol{
 
 		.img__principal{
 			margin-top: 10%;
-			height: 15em;
+			height: 20em;
 		}
 		
 		.main{
@@ -188,7 +200,7 @@ ol{
 		}
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (max-width: 720px) {
 		.img__principal{
 			height: 20em;
 		}
@@ -199,5 +211,8 @@ ol{
 	.presentacion{
 		flex-direction: column;
 		justify-content: center;
+	}
+	.img__principal{
+		height: 15em;
 	}
 }
