@@ -4,69 +4,102 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>JXC Turnos Online </title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link rel="stylesheet" href="../css/style.css">
 </head>
 	<body class="container">
-		<header>
-			<nav class="nav__menu">
-				<a href="../index.html">
-					<img src="../img/logo pagina.png" alt="logo de la pagina web" class="nav__logo">
-				</a>
-				<ol>
-					<li><a href="../index.html">Home</a></li>
-					<li><a href="../secciones/quienes-somos.html">Quienes Somos</a></li>
-					<li><a href="../secciones/nuestros-servicios.html">Nuestros Servicios</a></li>
-					<li><a href="turnos-online.html">Turnos Online</a></li>
-					<li><a href="../secciones/contacto.html">Contacto</a></li>
-				</ol>
-			</nav>
-			<h1>Agenda tu Turno</h1>
+		<header class="header">
+			<nav class="navbar navbar-expand-lg navbar-light sticky-top" id="botonera">
+				<div class="container-fluid">
+				  <a class="navbar-brand" href="../index.html">
+					  <img src="../img/logo pagina.png" alt="logo pagina">
+				  </a>
+				  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ol class="navbar-nav ms-auto mb-2 mb-lg-0">
+					  <li class="nav-item">
+						<a class="nav-link" href="../index.html">Home</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="../secciones/quienes-somos.html">Quienes Somos</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="../secciones/nuestros-servicios.html">Nuestros Servicios</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="./secciones/turnos-online.html">Turnos Online</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="../secciones/contacto.html">Contacto</a>
+					  </li>
+					</ol>
+				  </div>
+				</div>
+			  </nav>
 		</header>
-		<Main>
+		<Main class="main">
+			<h1>Agenda tu Turno</h1>
 			<section>
 				<div>
-					<form action="envio.php" method="post">
+					<form action="envio.php" method="post" class="form__turnos">
 						<fieldset>
-							<legend>Datos Personales</legend>
-							<label for="Nombre y Apellido">Nombre y Apellido</label>
-							<input type="text" name="Nombre y Apellido" id="Nombre y Apellido">
-							<br>
-							<label for="Email">Email</label>
-							<input type="text" name="Email" id="Email">
-							<br>
-							<!--en type puede ir text o email tranquilamente -->
-							<label for="Telefono">Telefono</label>
-							<input type="text" name="Telefono" id="Telefono">
-							<br>
-							<label for="Obra Social">Obra Social</label>
-							<input type="text" name="Obra Social" id="Obra Social">
+							<legend class="legend__color">Datos Personales</legend>
+								<div>
+									<div class="form-floating mb-3">
+										<input type="Nombre y Apellido" class="form-control" id="floatingInput" placeholder="Nombre y Apellido">
+										<label for="floatingInput">Nombre y Apellido</label>
+									</div>
+
+									<div class="form-floating">
+										<input type="Email" class="form-control" id="floatingPassword" placeholder="Email">
+										<label for="floatingPassword">Email</label>
+									</div>
+								</div>
+								<div class="second__form--padding">
+									<div class="form-floating mb-3">
+										<input type="Telefono" class="form-control" id="floatingInput" placeholder="Telefono">
+										<label for="floatingInput">Telefono</label>
+									</div>
+
+									<div class="form-floating">
+										<input type="Obra Social" class="form-control" id="floatingPassword" placeholder="Obra Social">
+										<label for="floatingPassword">Obra Social</label>
+									</div>
+								</div>
 						</fieldset>
 						<fieldset>
-							<legend>Servicio</legend>
-							<select name="Servicio" id="Servicio">
-								<option value="Kinesiolagia">Kinesiologia</option>
-								<option value="Quiropraxia">Quiropraxia</option>
-								<option value="Masajes">Masajes Descontracturantes</option>
-								<option value="Rehabilitacion">Rehabilitacion Post Operatoria</option>
-							</select>
-							<br>
-							<label for="Domicilio">A Domicilio</label>
-							<input type="radio" name="envio" id="Domicilio" value="Domicilio">
-							<br>
-							<label for="Nuestra Sucursal">Nuestra Sucursal</label>
-							<input type="radio" name="envio" id="Nuestra Sucursal" value="Nuestra Sucursal">
+							<legend class="legend__color">Servicios</legend>
+								<div class="form-floating">
+									<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+								 		<option selected="">Selecciona el Servicio</option>
+								  		<option value="Kinesiologia">Kinesiologia</option>
+								  		<option value="Quiropraxia">Quiropraxia</option>
+								  		<option value="Masajes Descontracturantes">Masajes Descontracturantes</option>
+										<option value="Rehabilitacion Post Operatoria">Rehabilitacion Post Operatoria</option>
+									</select>
+									<label for="floatingSelect">Selecciona el Servicio</label>
+							  	</div>
+								<div class="form__radio">
+									<label for="Domicilio">A Domicilio</label>
+									<input type="radio" name="envio" id="Domicilio" value="Domicilio">
+							
+									<label for="Nuestra Sucursal">Nuestra Sucursal</label>
+									<input type="radio" name="envio" id="Nuestra Sucursal" value="Nuestra Sucursal">
+								</div>	
 						</fieldset>
-						
-						<input type="submit" value="Enviar">
-						<input type="reset" value="Cancelar">
+						<div class="btn">
+							<button type="Enviar">Enviar</button>
+							<button type="Cancelar">Cancelar</button>
+						</div>
 					</form>
 				</div>
 			</section>
-			<img src="" alt="Imagen al lado del formulario">
 		</Main>
 		<footer class="footer">
-			<h3 class="footer__titulo">Seguinos en Nuestras Redes</h3>
-			<h4>Derechos de autor reservados 2022</h4>
+			<h5 class="footer__titulo">Seguinos en Nuestras Redes</h5>
+			<h6>Derechos de autor reservados 2022</h6>
 			<a href="https://twitter.com" target="_blank">
 				<img src="../img/logo twitter.png" alt="logo twitter" class="footer__icon">
 			</a>

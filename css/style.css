@@ -7,7 +7,7 @@
 
 body{
 	background: #fff;
-    color: #434343;
+    color: black;
     font-size: 16px;
     font-family: 'Oswald', sans-serif;
 }
@@ -41,7 +41,7 @@ ol{
 	grid-area: footer;
 }
 
-.footer h4{
+.footer h6{
 	color: black;
 	text-align: center;
 
@@ -54,8 +54,7 @@ ol{
 }
 
 .footer__icon{
-	width: 3%;
-
+	width: 2%;
 }
 
 /* Termina Estilos Comunes */
@@ -65,44 +64,32 @@ ol{
 	grid-area: header;
 }
 
-.nav__menu{
-	font-size: 16px;
-	display: flex;
-	justify-content: space-between;
-	color: black;
+#botonera{
 	background: rgb(18,18,129);
 	background: linear-gradient(90deg, rgba(18,18,129,1) 30%, rgba(157,44,227,1) 62%);
-	position: sticky;
 	top: 0;
-	width: 100%;
-	height: 75px;
 }
+	#botonera img{
+		width: 80px;
+	}
 
-.nav__logo{
-	width: 75px;	
-}
+	.nav-link{
+		background: linear-gradient(currentColor,currentColor);
+		background-position: 0% 100%;
+		background-repeat: no-repeat;
+		background-size: 0% 3px;
+		transition: background-size .3s;
+		color: black;
+	}
 
-.nav__menu ol{
-	display: flex;
-}
+	.nav-link:hover{
+		color: black;
+		background-size: 100% 3px;
+	}
 
-.nav__menu ol li{
-	padding: 10px;
-}
-
-.nav__menu ol li a {
-	background: linear-gradient(currentColor,currentColor);
-	background-position: 0% 100%;
-	background-repeat: no-repeat;
-	background-size: 0% 3px;
-	transition: background-size .3s;
-}
-
-.nav__menu ol li a:hover {
-	color: black;
-	background-size: 100% 3px;
-}
-
+	.nav-link ol li{
+		padding: 10px;
+	}
 
 /*Parte Principal*/
 
@@ -124,14 +111,15 @@ ol{
 /* Inicia el Main*/
 
 .main{
-	margin-top: 10%;
-	margin-bottom: 10%;
+	margin-top: 5%;
+	margin-bottom: 5%;
 	grid-area: main;
 }
 
 .main h1{
 	text-align: center;
 	color: darkblue;
+	margin-bottom: 5%;
 }
 
 
@@ -149,6 +137,27 @@ ol{
 	padding: 20px 20px;
 }
 
+@keyframes fadeInDown {
+	0%{
+		opacity: 0;
+		-webkit-transform: translateY(-20px);
+		-ms-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+} 
+
+.animado{
+	animation-name: fadeInDown;
+	animation-duration: 4s;
+}
+
 /* inicia Quienes Somos*/
 
 .retratos{
@@ -161,7 +170,6 @@ ol{
 	justify-content: space-between;
 
 }
-
 
 
 .article__presentacion{
@@ -179,11 +187,61 @@ ol{
 	margin-bottom: 10px;
 }
 
+/* Inicia Nuestros Servicios*/
+
+.carrousel{
+	margin-top: 5%;
+}
+
+.img__carrousel{
+	height: 15rem;
+}
+/*Termina Nuestros Servicios*/
+
+/*Inicia Turnos Online*/
+
+.form__radio{
+	display: flex;
+	flex-direction: column;
+	padding-top: 2%;
+}
+
+.second__form--padding{
+	padding-top: 2%;
+}
+
+.legend__color{
+	color: blue;
+}
+
+.btn{
+	padding-top: 2%;
+	color: blue;
+}
+
+
+/*Inicia Contacto*/
+
+.contacto__propio{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.contacto__propio--mapa{
+	padding-top: 2%;
+	padding-bottom: 2%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
 /* Arranca los break points */
 
 @media screen and (max-width: 900px) {
 		.container{
 			width: 100%;
+			padding: 0;
 		}
 
 		.img__principal{
@@ -191,12 +249,13 @@ ol{
 			height: 20em;
 		}
 		
-		.main{
-			margin-bottom: 8%;
-		}
-
 		.footer__icon{
 			width: 5%;
+		}
+
+		.form__turnos{
+			margin-left: 3%;
+			margin-right: 3%;
 		}
 }
 
@@ -215,4 +274,11 @@ ol{
 	.img__principal{
 		height: 15em;
 	}
+}
+
+@media screen and (min-width: 576px) {
+	.container{
+		max-width: 100%;
+	}
+	
 }
