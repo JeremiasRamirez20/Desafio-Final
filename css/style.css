@@ -158,6 +158,10 @@ ol{
 	animation-duration: 4s;
 }
 
+#galeria{
+	display: flex;
+	justify-content:space-between;
+}
 /* inicia Quienes Somos*/
 
 .retratos{
@@ -281,4 +285,11 @@ ol{
 		max-width: 100%;
 	}
 	
+}
+
+@media screen and (max-width:992px){
+	.article__galeria{
+		padding-bottom: 2%;
+		padding-top: 2%;
+	}
 }
