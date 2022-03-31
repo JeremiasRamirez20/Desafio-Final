@@ -1,0 +1,22 @@
+.footer{
+    background: $nav__color;
+    height: auto;
+	width: 100%;
+	grid-area: footer;
+    h6{
+        color: black;
+	    text-align: center;
+    }
+    .footer__titulo{
+        text-align: center;
+        color: black;
+        margin-top: 5%;
+    }
+    .footer__icon{
+        width: 3%;
+        margin: 10px;
+        @media (max-width:900px) {
+            width: 5%;  
+        }
+    }
+}

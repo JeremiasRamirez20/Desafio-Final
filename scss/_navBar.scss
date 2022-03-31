@@ -1,0 +1,29 @@
+#botonera{
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:$nav__color;
+        img{
+            width: 80px;
+        }
+        .navbar-nav{
+            display: flex;
+                .nav-item{
+                    padding: 10px;
+                    .nav-link{
+                        background: linear-gradient(currentColor,currentColor);
+                        background-position: 0% 100%;
+                        background-repeat: no-repeat;
+                        background-size: 0% 3px;
+                        transition: background-size .3s;
+                        color: black;
+                        &:hover{
+                            color: black;
+                            background-size: 100% 3px;
+                        }
+                    }
+                }
+             }
+    
+}
