@@ -15,12 +15,15 @@
 .header{
     grid-area: header;
     .img__principal{
-        margin-top: 5%;
+        margin-top: map-get($map:$margin, $key:'cinco' );
         background-image: url(../img/header.webp);
         background-size: cover;
         height: 30em;
         @media (max-width:992px){
             height: 20em;
+        }
+        @media (max-width:550px) {
+            height: 12em;
         }
     }
     .img__principal h1{
@@ -32,8 +35,8 @@
 }
 
 .main{
-    margin-top: 5%;
-	margin-bottom: 5%;
+    margin-top: map-get($map:$margin, $key:'cinco' );
+	margin-bottom: map-get($map:$margin, $key:'cinco' );
 	grid-area: main;
     h1{
         color:$title__color;
@@ -51,6 +54,7 @@
         border-style: none;
         padding: 20px 20px;
         color:$text__color;
+        font: $font__text;
     }
 }
 
@@ -81,14 +85,9 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
     .article__presentacion{
-        text-align: center;
-	    height: auto;
-	    margin: 30px auto;
-	    padding: 20px 20px;
-	    border-style: none;
-	    width: 45%;
+        @extend .section__parrafo;
+        width: 45%;
         p{
-            color:$text__color;
             font: $font__text;
         }
         .retratos{
@@ -103,13 +102,13 @@
 /* Inicia Nuestros Servicios*/
 
 .table{
-    width: 100%;
+    width: $W-100;
 }
 
 .carrousel{
-	margin-top: 5%;
+	margin-top:map-get($map:$margin, $key:'dos');
     .carousel-inner{
-        height: auto;
+        height: 25%;
     }
 }
 
@@ -132,21 +131,17 @@
 }
 
 .btn{
-    margin-top: 2%;
+    margin-top: map-get($map:$margin,$key:'dos') ;
 }
 
 /*Inicia Contacto*/
 
 .contacto__propio{
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
+    @include contacto (flex, row, flex-end)
 }
 
 .contacto__propio--mapa{
 	padding-top: 2%;
 	padding-bottom: 2%;
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
+    @include contacto (flex, row, center)
 }

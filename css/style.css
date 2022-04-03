@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@1,86.5,705&family=Oswald:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
 @media screen and (max-width: 900px) {
   .container {
     width: 100%;
@@ -52,7 +52,7 @@
 .body {
   background: white;
   font-size: 16px;
-  font: "Open Sans", sans-serif; }
+  font: "Cedarville Cursive"; }
   .body .container {
     width: 90%;
     height: 100vh;
@@ -72,6 +72,9 @@
     @media (max-width: 992px) {
       .header .img__principal {
         height: 20em; } }
+    @media (max-width: 550px) {
+      .header .img__principal {
+        height: 12em; } }
   .header .img__principal h1 {
     display: flex;
     flex-direction: column;
@@ -88,14 +91,15 @@
   .main .section__titulo {
     text-align: center;
     color: darkblue; }
-  .main .section__parrafo {
+  .main .section__parrafo, .main .presentacion .article__presentacion, .presentacion .main .article__presentacion {
     text-align: center;
     width: 50%;
     height: auto;
     margin: 30px auto;
     border-style: none;
     padding: 20px 20px;
-    color: #9d02ae; }
+    color: #9d02ae;
+    font: "Cedarville Cursive"; }
 
 @keyframes fadeInDown {
   0% {
@@ -118,15 +122,9 @@
   flex-wrap: wrap;
   justify-content: space-between; }
   .presentacion .article__presentacion {
-    text-align: center;
-    height: auto;
-    margin: 30px auto;
-    padding: 20px 20px;
-    border-style: none;
     width: 45%; }
     .presentacion .article__presentacion p {
-      color: #9d02ae;
-      font: "Open Sans", sans-serif; }
+      font: "Cedarville Cursive"; }
     .presentacion .article__presentacion .retratos {
       width: 100px; }
   .presentacion .article__titulos {
@@ -137,9 +135,9 @@
   width: 100%; }
 
 .carrousel {
-  margin-top: 5%; }
+  margin-top: 2%; }
   .carrousel .carousel-inner {
-    height: auto; }
+    height: 25%; }
 
 /*Termina Nuestros Servicios*/
 /*Inicia Turnos Online*/
@@ -168,7 +166,7 @@
   padding-bottom: 2%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end; }
+  justify-content: center; }
 
 .footer {
   background: #121281 linear-gradient(90deg, #121281 30%, #9d2ce3 62%);
@@ -184,7 +182,8 @@
     margin-top: 5%; }
   .footer .footer__icon {
     width: 3%;
-    margin: 10px; }
+    margin: 10px;
+    text-decoration: none; }
     @media (max-width: 900px) {
       .footer .footer__icon {
         width: 5%; } }

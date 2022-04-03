@@ -1,14 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
 //definir variables 
 
+//fonts
+
+$font__main:'Oswald', sans-serif;
+$font__text:'Cedarville Cursive';
+
 //colores
+
 $main__color:rgb(255, 255, 255);
 $text__color:rgb(157, 2, 174);
 $title__color:rgb(0, 0, 139);
 $subtitle__color:rgb(0, 139, 139);
-$nav__color:rgb(18,18,129)linear-gradient(90deg, rgba(18,18,129,1) 30%, rgba(157,44,227,1) 62%);
+$nav__color:rgb(18,18,129) linear-gradient(90deg, rgba(18,18,129,1) 30%, rgba(157,44,227,1) 62%);
 
 //sizing
 
 $W-100:100%;
 $W-50:50%;
 $W-25:25%;
+
+
+@mixin contacto ($display, $flex-direction, $justify-content) {
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+}
+
+
+$margin: (
+     'dos': 2%,
+     'cinco': 5%,
+);
