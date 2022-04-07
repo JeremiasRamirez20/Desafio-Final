@@ -93,6 +93,9 @@
         .retratos{
             width: 100px;
         }
+        .retrato2{
+            width: 124px;
+        }
     }
     .article__titulos{
         color:$subtitle__color;
@@ -107,9 +110,7 @@
 
 .carrousel{
 	margin-top:map-get($map:$margin, $key:'dos');
-    .carousel-inner{
-        height: 25%;
-    }
+    height: 5%;
 }
 
 /*Termina Nuestros Servicios*/
@@ -143,5 +144,5 @@
 .contacto__propio--mapa{
 	padding-top: 2%;
 	padding-bottom: 2%;
-    @include contacto (flex, row, center)
+    @include contacto (flex, row, center);
 }

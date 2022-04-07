@@ -1,31 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
-@media screen and (max-width: 900px) {
-  .container {
-    width: 100%;
-    padding: 0; }
-  .form__turnos {
-    margin-left: 3%;
-    margin-right: 3%; } }
-
-@media screen and (max-width: 992px) {
-  .article__galeria {
-    padding-bottom: 2%;
-    padding-top: 2%; } }
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 100%; } }
-
-@media screen and (max-width: 600px) {
-  .presentacion {
-    flex-direction: column;
-    justify-content: center; } }
-
-@media screen and (min-width: 576px) {
-  .container {
-    max-width: 100%; } }
-
 #botonera {
   top: 0;
   display: flex;
@@ -127,6 +101,8 @@
       font: "Cedarville Cursive"; }
     .presentacion .article__presentacion .retratos {
       width: 100px; }
+    .presentacion .article__presentacion .retrato2 {
+      width: 124px; }
   .presentacion .article__titulos {
     color: darkcyan; }
 
@@ -135,9 +111,8 @@
   width: 100%; }
 
 .carrousel {
-  margin-top: 2%; }
-  .carrousel .carousel-inner {
-    height: 25%; }
+  margin-top: 2%;
+  height: 5%; }
 
 /*Termina Nuestros Servicios*/
 /*Inicia Turnos Online*/
@@ -181,9 +156,35 @@
     color: black;
     margin-top: 5%; }
   .footer .footer__icon {
-    width: 3%;
+    width: 2%;
     margin: 10px;
     text-decoration: none; }
     @media (max-width: 900px) {
       .footer .footer__icon {
         width: 5%; } }
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 100%;
+    padding: 0; }
+  .form__turnos {
+    margin-left: 3%;
+    margin-right: 3%; } }
+
+@media screen and (max-width: 992px) {
+  .article__galeria {
+    padding-bottom: 2%;
+    padding-top: 2%; } }
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 100%; } }
+
+@media screen and (max-width: 600px) {
+  .presentacion {
+    flex-direction: column;
+    justify-content: center; } }
+
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 100%; } }
