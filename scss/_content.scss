@@ -1,8 +1,10 @@
-.body{
-    background: $main__color;
-    font-size: 16px;
-    font: $font__text;
-        .container{
+body{
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+    background-color:$main__color;
+    font-family: $font__main;
+        #container{
             width: 90%;
             height: 100vh;
             margin: auto;
@@ -31,6 +33,7 @@
         flex-direction: column;
         align-items: center;
         color:$title__color;
+        font-family: $font__main;
     }
 }
 
@@ -54,7 +57,7 @@
         border-style: none;
         padding: 20px 20px;
         color:$text__color;
-        font: $font__text;
+        font-family: $font__text;
     }
 }
 
@@ -88,7 +91,7 @@
         @extend .section__parrafo;
         width: 45%;
         p{
-            font: $font__text;
+            font-family: $font__text;
         }
         .retratos{
             width: 100px;
@@ -111,6 +114,9 @@
 .carrousel{
 	margin-top:map-get($map:$margin, $key:'dos');
     height: 5%;
+    .carousel-inner{
+        max-height:40rem;
+    }
 }
 
 /*Termina Nuestros Servicios*/
@@ -133,6 +139,12 @@
 
 .btn{
     margin-top: map-get($map:$margin,$key:'dos') ;
+    border-radius: 30px;
+    color: black;
+    background-color: blueviolet;
+    &:hover{
+        color: white;
+    }
 }
 
 /*Inicia Contacto*/

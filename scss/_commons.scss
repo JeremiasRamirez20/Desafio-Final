@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Slab:wght@500&display=swap');
 
 //definir variables 
 
 //fonts
 
-$font__main:'Oswald', sans-serif;
-$font__text:'Cedarville Cursive';
+$font__main:'Ubuntu', sans-serif;
+$font__text:'Roboto Slab', serif;
 
 //colores
 
-$main__color:rgb(255, 255, 255);
+$main__color:rgba(145, 147, 171, 0.375);
 $text__color:rgb(157, 2, 174);
 $title__color:rgb(0, 0, 139);
 $subtitle__color:rgb(0, 139, 139);
