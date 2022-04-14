@@ -19,6 +19,9 @@
                         background-size: 0% 3px;
                         transition: background-size .3s;
                         color: black;
+                        @media (max-width:992px){
+                            color: white;
+                        }
                         &:hover{
                             color: black;
                             background-size: 100% 3px;

@@ -20,6 +20,9 @@
         background-size: 0% 3px;
         transition: background-size .3s;
         color: black; }
+        @media (max-width: 992px) {
+          #botonera .navbar-nav .nav-item .nav-link {
+            color: white; } }
         #botonera .navbar-nav .nav-item .nav-link:hover {
           color: black;
           background-size: 100% 3px; }
@@ -51,7 +54,8 @@ body {
         height: 20em; } }
     @media (max-width: 550px) {
       .header .img__principal {
-        height: 12em; } }
+        height: 12em;
+        width: auto; } }
   .header .img__principal h1 {
     display: flex;
     flex-direction: column;
@@ -70,14 +74,18 @@ body {
     text-align: center;
     color: darkblue; }
   .main .section__parrafo, .main .presentacion .article__presentacion, .presentacion .main .article__presentacion {
-    text-align: center;
-    width: 50%;
+    text-align: justify;
     height: auto;
     margin: 30px auto;
     border-style: none;
     padding: 20px 20px;
     color: #9d02ae;
     font-family: "Roboto Slab", serif; }
+  .main #galeria {
+    margin-top: 5%; }
+    .main #galeria h2 {
+      text-align: center;
+      color: darkcyan; }
 
 @keyframes fadeInDown {
   0% {
@@ -104,11 +112,14 @@ body {
     .presentacion .article__presentacion p {
       font-family: "Roboto Slab", serif; }
     .presentacion .article__presentacion .retratos {
-      width: 100px; }
+      width: 100px;
+      border-radius: 10%; }
     .presentacion .article__presentacion .retrato2 {
-      width: 124px; }
+      width: 124px;
+      border-radius: 10%; }
   .presentacion .article__titulos {
-    color: darkcyan; }
+    color: darkcyan;
+    text-align: center; }
 
 /* Inicia Nuestros Servicios*/
 .table {
@@ -148,11 +159,21 @@ body {
   justify-content: flex-end; }
 
 .contacto__propio--mapa {
-  padding-top: 2%;
-  padding-bottom: 2%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: center;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden; }
+  .contacto__propio--mapa iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 .footer {
   background: #121281 linear-gradient(90deg, #121281 30%, #9d2ce3 62%);
@@ -167,12 +188,15 @@ body {
     color: black;
     margin-top: 5%; }
   .footer .footer__icon {
-    width: 2%;
+    width: 3%;
     margin: 10px;
     text-decoration: none; }
     @media (max-width: 900px) {
       .footer .footer__icon {
-        width: 5%; } }
+        width: 4%; } }
+    @media (max-width: 500px) {
+      .footer .footer__icon {
+        width: 7%; } }
 
 @media screen and (max-width: 900px) {
   .container {
@@ -199,3 +223,7 @@ body {
 @media screen and (min-width: 576px) {
   .container {
     max-width: 100%; } }
+
+@media screen and (max-width: 435px) {
+  .table {
+    font-size: 12px; } }
